@@ -25,6 +25,15 @@ module.exports = {
     // allow debugger during development
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
     "import/no-webpack-loader-syntax":
-      process.env.NODE_ENV === "production" ? "error" : "off"
+      process.env.NODE_ENV === "production" ? "error" : "off",
+    quotes: ["warn", "double", { avoidEscape: true }],
+    semi: ["warn", "always"],
+    "space-before-function-paren": "off",
+    "vue/html-self-closing": [
+      "warn",
+      {
+        html: { normal: "never", void: "always" }
+      }
+    ]
   }
 };
